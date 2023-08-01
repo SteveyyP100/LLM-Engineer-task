@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>Uploading & Reading CSV file</title> 
+</head> 
+<body> 
+    <form method = "POST" enctype="multipart/form-data" action = "/">   
+        <input type="file" name="file" accept=".csv">
+        <input type = "submit" value="Upload"> 
+    </form>
+    <p style="color:green;"> File uploaded successfully!! </p>
+  <form method="POST" action="/one-shot-predict" content-type="application/json" target="_blank">
+        <label for="columns">Columns: </label>
+        <input type="text" name="columns" size="200">
+        <input type="submit" value="Process CSV (One Shot)"/>
+    </form>
+    <form method="POST" action="/step-by-step-predict" content-type="application/json" target="_blank">
+        <label for="User Message">Process Step By Step with ChatGPT: </label>
+        <input type="submit" value="Process CSV (Step By Step)"/>
+    </form>
+</body> 
+</html>

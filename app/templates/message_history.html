@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>{{ data | safe }}</div>
+        <br>
+        <form method="POST" action="/step-by-step-predict" content-type="application/json" target="_blank">
+            <label for="user-message" value="Please analyze.">What would you like to do next? </label>
+            <input type="text" name="user-message" size="200">
+            <input type = "submit" value="Send to GPT"> 
+            <br>
+            <a href="/">Return Home</a>
+    </body>
+</html>
